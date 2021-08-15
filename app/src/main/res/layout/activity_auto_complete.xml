@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AutoCompleteActivity">
+    <include
+        android:id="@+id/search_bar"
+        layout="@layout/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/enroll_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="단어 등록"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/search_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="128dp"/>
+
+    <EditText
+        android:id="@+id/enroll_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/enroll_text"
+        app:layout_constraintTop_toBottomOf="@id/enroll_text"
+        app:layout_constraintEnd_toStartOf="@id/enroll_btn"/>
+
+    <Button
+        android:id="@+id/enroll_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/enroll_text"
+        android:text="단어 등록하기"
+        android:paddingHorizontal="8dp"/>
+
+    <TextView
+        android:id="@+id/result_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="선택된 단어 정보"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/enroll_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="64dp"/>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="선택된 단어는 xx이며, yy글자로 이루어져 있습니다."
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/result_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:maxLines="3" />
+</androidx.constraintlayout.widget.ConstraintLayout>
